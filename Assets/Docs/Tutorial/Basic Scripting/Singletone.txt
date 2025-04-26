@@ -1,0 +1,32 @@
+Singletone adalah konseep game manager 
+dimana di script ini akan menampung core dari permainan kita
+di Singletone kita akan menyimpan berbagai variabel dan method
+
+!Beware
+Gunakana Game Manager dengan baik
+jangan mengelola terlalu banyak logika dan diluar konteks
+Kalau Perlu Dalam Satu Scene
+Misal awalnya hanya punya satu yaitu Game Manager
+
+kita bisa pecah jadi bbrapa
+UIManager
+CharacterManager
+EnemyManager
+AudioManager
+
+dll..
+
+
+cara pake Singletone gimana? 
+
+public static Instance nama_class;
+
+void Start(){
+    if(Instance != null)
+        {
+            destroy(Instance)
+        }
+        else{
+            Instance = this;
+        }
+}

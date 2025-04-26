@@ -1,0 +1,7 @@
+// Struct merupakan saudara dari class
+// cocok digunakan untuk menyimpan data2 sederhana yang tidak komplkes
+atau berhubungan dengan component dr unity
+// tidak bisa set method
+// tidak bisa metode extends atau perbudakan
+
+Kelebihan : lebih ringan dan cepat

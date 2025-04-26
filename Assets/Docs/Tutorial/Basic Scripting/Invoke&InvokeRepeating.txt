@@ -1,0 +1,33 @@
+// This Invoke by MonoBehaviour not EventAction
+
+Invoke merupakan suatu fungsi MonoBehaviour,
+fungsi utamannya adalah memberikan durasi delay 
+sebelum pemanggilan fungsi
+
+terdapat Invoke dan InvokeRepeating
+perbedaannya Invoke hanya akan berjalan sekali 
+sedangkan InvokeRepeating akan berjalan terus sebelum di hentikan
+
+
+Cara menghentikan InvokeRepeating
+CancelInvoke() // menghentikan seluruh invoke yang berjalan
+CancelInvoke('nama_fungsi') // menghentikan invoke dengan invoke yang dituju
+
+
+// Penulisan Invoke
+Invoke('nama_fungsi', 1f); // delay 1 detik sebelum memanggil fungsi
+
+example : 
+public void StartGame(){
+    ...
+}
+
+void Start(){
+    Invoke("StartGame", 1f);
+}
+
+
+// Penulisan InvokeRepeating
+InvokeRepeating("StartGame", 1f, 3f); 
+// fungsi akan delay selama 1 detik lalu akan berjalan kembali setiap 3detik
+

@@ -1,0 +1,20 @@
+// di C# kita bsa mennguanakn event publish/subscribe
+// fungsi utamananya adalah agar terjadi komunikasi 
+antar script tanpa harus tahu detail siapa yang menyuruh menjalankan
+
+public event Action NamaEventAction;
+
+void Update(){
+
+    logic.. pemrograman
+        NameEventAction?.Invoke(); // apakah ada yang subscribe event, kalo ada kasi notif ke mereka
+}
+
+// cara subsribe event
+Component.NamaEventAction += NamaFungsi; 
+// NamaFungsi adalah fungsi yang akan berjalan ketika event action berjalan
+
+
+// cara unsub event
+Component.NamaEventAction -= NamaFungsi; 
+// NamaFungsi adalah fungsi yang akan berjalan ketika event action berjalan

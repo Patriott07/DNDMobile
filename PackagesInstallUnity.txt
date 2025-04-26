@@ -1,0 +1,23 @@
+# Package yang harus ada di unity editor kalian
+
+- NaughtyAttributes (free)
+- DoTween
+- 3D Creation with AI
+- Probuilder
+- Cinemachine
+- PlayerPrefs Editor
+- Post Processing
+
+---
+
+# How to add package 
+- Download Package Dari unity
+- Dan Lakukan Import 
+- Tulis Nama package di file PackagesInstallUnity.txt
+
+Apabila Setelah import terdapat folder baru dari package tersebut, ikuti step berikut :
+-buka editor unity
+-lakukan drag and drop folder package ke dalam 
+Resource/Packages_Unity
+
+- taruh di dalam file tersebut

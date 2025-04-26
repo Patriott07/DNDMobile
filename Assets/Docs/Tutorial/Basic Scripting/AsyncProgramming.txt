@@ -1,0 +1,46 @@
+Kiri: Function Biasa
+Caller memanggil fungsi → jalankan semua proses 
+di dalamnya sampai selesai → return kembali.
+
+Tidak bisa "pause" di tengah-tengah.
+
+Eksekusinya sinkron (langsung dari atas ke bawah).
+
+contoh : 
+
+void MyFunction() {
+    Debug.Log("Start");
+    // tidak bisa nunggu 2 detik
+    Debug.Log("End");
+}
+
+---
+
+Kanan: Coroutine (Unity-style)
+Coroutine bisa "suspend" (pause) eksekusi di tengah jalan menggunakan yield.
+jadi yield merupakan perintah untk suspend
+
+Caller bisa resume lagi coroutine itu nanti.
+
+Bahkan coroutine bisa dihentikan paksa (destroy) sebelum selesai.
+
+Cocok untuk operasi waktu berjalan seperti animasi, delay, loading, dll.
+
+contoh : 
+
+IEnumerator MyCoroutine() {
+    Debug.Log("Start");
+    yield return new WaitForSeconds(2); // PAUSE di sini
+    Debug.Log("End"); // Dilanjutkan 2 detik kemudian
+}
+
+jadi yield return null itu ngasi delay 1 frame ya? 
+kalo mau delay 30,45 atau 60 frame gmn
+
+
+IEnumerator MyCoroutine()
+{
+    Debug.Log("Step 1");
+    yield return WaitForFrames(30); // delay 30 frame
+    Debug.Log("Step 2");
+}

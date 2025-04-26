@@ -1,0 +1,9 @@
+enum EnemyState{ // membuat pilihan yang bisa dipilih oleh field
+    WALK,
+    ATTACK, 
+    RUN, 
+    HIDE,
+    DEFFENDS
+}
+
+EnemyState stateAnimasiMusuh; // field

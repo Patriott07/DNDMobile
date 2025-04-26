@@ -1,0 +1,29 @@
+[RequireComponent(typeof(Health))]
+// berfungsi untuk memberitahu unity agar class yang kita buat harus memiliki 
+component tersebut
+
+misal : 
+[RequireComponent(typeof(Health))]
+public class Character : NetworkBehaviour{
+
+}
+
+Jika dalam game object tidak ada component Health(Dalam konteks ini script)
+maka game akan berhenti
+
+
+Fungsinya adalah:
+
+🔧 [RequireComponent(typeof(Health))]
+Ini adalah attribute di Unity yang digunakan untuk
+memastikan bahwa komponen Health harus ada pada 
+GameObject yang memiliki script Character.
+
+🎯 Tujuan utamanya:
+Jika kamu menambahkan script Character ke suatu 
+GameObject lewat inspector, Unity akan secara 
+otomatis menambahkan komponen Health juga (kalau belum ada). 
+Ini berguna agar tidak lupa atau mencegah error runtime karena 
+Health dibutuhkan oleh Character.
+
+

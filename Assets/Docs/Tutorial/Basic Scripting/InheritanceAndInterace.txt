@@ -1,0 +1,63 @@
+Inheritance (Pewarisan Class)
+Inheritance = mewarisi properti dan method dari class lain.
+
+public class Character
+{
+    public int health = 100;
+
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+        Debug.Log("Health now: " + health);
+    }
+}
+
+public class Player : Character // its parent class
+{
+    public void Attack()
+    {
+        Debug.Log("Player is attacking!");
+    }
+}
+
+
+----
+
+
+Interface (Kontrak kemampuan)
+Interface = kontrak yang harus diikuti oleh class yang mengimplementasinya.
+
+
+public interface IDamageable
+{
+    void TakeDamage(int amount); // method yang harus dimiliki child nanti
+}
+
+public class Enemy : MonoBehaviour(inheritance), IDamageable(interface)
+{
+    public int health = 50;
+
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+        Debug.Log("Enemy health: " + health);
+    }
+}
+Interface tidak boleh punya isi, hanya definisi method.
+
+
+Perbedaan Penting
+
+Inheritance ---	Interface
+Mewarisi method & field ---	Hanya mendefinisikan method saja
+Satu class bisa 1 parent --- Bisa banyak interface
+"is-a" relationship ---	"can-do" / "behavior"
+Bisa punya implementasi ---	Tidak bisa punya implementasi
+
+interface bisa di inisiasi banyak dalam satu class
+public class DestructibleObject : MonoBehaviour, IDamageable, IDamageable2, IDamageable3 { ... }
+
+
+Inheritance class di C# cuma bisa SATU → Enemy : MonoBehaviour ✅
+Interface bisa lebih dari satu → Enemy : MonoBehaviour, IDamageable, IAttackable, IMovable ✅
+

@@ -1,0 +1,26 @@
+ScriptableObject adalah class berbasis data yang 
+bisa kamu buat sebagai asset di project Unity.
+Berbeda dari MonoBehaviour (yang ditempel ke GameObject), 
+ScriptableObject tidak perlu ada di scene.
+
+⚡ Fungsinya:
+Menyimpan data game (stats item, skill, level, dll)
+
+Digunakan oleh banyak object sekaligus (hemat memori)
+
+Editable di Inspector (tanpa ngerun game)
+
+
+Kapan Gunakan ScriptableObject?
+
+Gunakan ketika...  ---  Jangan gunakan jika...
+
+Kamu butuh data yang sama dipakai banyak object ---	Kamu butuh logika runtime yang kompleks
+Data bersifat statis (item, musuh, skill) ---  Data harus dinamis dan berubah per instance
+Mau pisahkan data dari logika --- Butuh interaksi langsung dengan GameObject
+
+
+Contoh Studi Kasus: Kartu Game
+🎯 Tujuan:
+Kita mau bikin 3 kartu: Fireball, Heal, Shield
+
